@@ -1,13 +1,228 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+        /*HTML & BODY*/
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-image: url("./img/shoe-shop.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  font-family: 'Merriweather', serif;
+  font-size: 15px;
+  margin: 0;
+}
+
+.inner{
+  display: grid;
+  grid-template-areas: 'header''main''footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100vh;
+}
+
+          /*HEADER*/
+header{
+  grid-area: header;
+  background-color: white;
+  padding: 0 100px;
+  height: 100px;
+}
+#menu-icon{
+    display: none;
+}
+
+.rows {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+        div.brand-logo img#logo{
+          width: 70%;
+        }
+        div.links a{
+          color: black;
+          font-size: 17px;
+          text-decoration: none;
+          margin: 0 30px;
+        }
+
+
+
+          /*SECTION*/
+section{
+  grid-area: main;
+          display: flex;
+          flex-flow: wrap;
+          margin: 5% auto 4.7%;
+        }
+        section main{
+          background-color: rgba(0, 0, 0, 0.7);
+          color: white;
+          padding: 20px;
+          margin: 30px 30px 30px 0;
+          height: 400px;
+          width: 520px;
+        }
+        main h1{
+          font-size: 40px;
+        }
+        section aside{
+          margin: 30px 0 30px 30px;
+          float: right;
+          width: 300px;
+        }
+
+
+          /*FOOTER*/
+footer{
+  grid-area: footer;
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 15px 10px 10px;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+
+
+        /*FORM*/
+aside form{
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+}
+.form-div{
+  margin-top: 10px;
+}
+
+legend{
+    font-size: 23px;
+    background-color: black;
+    padding: 7px;
+    margin-bottom: 10px;
+}
+
+input,button{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #a4a4a4;
+  font-size: 1.6rem;
+  font-family: -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  'Open Sans',
+  'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+button {
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+input:hover,
+select:hover,
+textarea:hover,
+button:hover {
+  border: 0.2rem solid #404040;
+
+}
+
+.primary {
+  background-color: #f0c040;
+}
+
+
+button.green {
+  background-color: #90ee90;
+}
+
+button.block {
+  width: 100%;
+}
+.danger {
+  color: #ffe0e0e0;
+  /*background-color: #ffe0e0e0;*/
+  font-size: 14px;
+}
+input#amount{
+  padding-left: 45px;
+  width: 53%;
+}
+.input-group-addon {
+  position: absolute;
+  padding: 1.2rem;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+}
+
+#alert{
+  background-color: white;
+  padding: 100px;
+  position: absolute;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+  top: 30%;
+  z-index: 1;
+}
+#alert-heading{
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+#alert-para{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+
+@media only screen and (max-device-width:859px){
+    section aside, section main{
+        margin: 30px auto;
+
+    }
+}
+
+@media only screen and (min-device-width: 860px) and (max-device-width:1345px){
+
+     section main{
+         margin: 30px auto;
+     }
+}
+
+@media only screen and (max-device-width: 940px){
+    #menu-icon{
+        display: block;
+    }
+    .links{
+        display: none;
+    }
+
+    .menu-list{
+        background-color: white;
+        color: black;
+        top: 80px;
+        right: 5%;
+        padding: 20px;
+        position: absolute;
+        list-style: none;
+    }
+    .menu-list li{
+        margin: 10px;
+    }
+    .menu-list li a{
+        color: black;
+        text-decoration: none;
+    }
 }
