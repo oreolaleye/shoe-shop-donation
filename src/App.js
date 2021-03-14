@@ -25,12 +25,13 @@ function App() {
         setValues({...values, amount: event.target.value})
     }
 
-    const [submitted, setSubmitted] = useState(false);
-    const [valid, setValid] = useState(false);
+    // eslint-disable-next-line no-unused-vars
+    // const [submitted, setSubmitted] = useState(false);
+    // eslint-disable-next-line no-unused-vars
+    // const [valid, setValid] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setSubmitted(true);
     }
 
     const refreshPage = ()=>{
@@ -71,9 +72,11 @@ function App() {
                 </ul>
                     : null}
                 {close ?
+                    // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 <a id="menu-icon" href="#" onClick={() => {setUnhide(true); setClose(false)}}>
                     <img src={menu} alt=""/></a> : null}
                 {unhide ?
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 <a id="close-icon" href="#" onClick={() => {setUnhide(false); setClose(true)}}>
                     <img src={closeicon} alt=""/></a> : null}
 
